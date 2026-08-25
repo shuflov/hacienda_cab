@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hacienda Čab – Bicyklisti piateho dňa</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0f172a;
+    color: #e2e8f0;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+  }
+  header {
+    background: #020617;
+    padding: 3.5rem 1rem 2.5rem;
+    text-align: center;
+    border-bottom: 1px solid #1e293b;
+    position: relative;
+  }
+  .lang-toggle {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    background: #1e293b;
+    border: 1px solid #334155;
+    color: #e2e8f0;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+  }
+  .lang-toggle span.active {
+    color: #60a5fa;
+  }
+  h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #f8fafc;
+    letter-spacing: -0.05em;
+    margin-bottom: 0.4rem;
+  }
+  .subtitle {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.18rem;
+  }
+  .date {
+    margin-top: 0.8rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #60a5fa;
+  }
+  .who {
+    margin-top: 0.6rem;
+    color: #94a3b8;
+    font-size: 0.95rem;
+  }
+  .container {
+    max-width: 640px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+  }
+  .card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 1.8rem;
+    margin-bottom: 1.4rem;
+  }
+  .card h2 {
+    font-size: 1.2rem;
+    color: #f1f5f9;
+    margin-bottom: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .highlight { color: #60a5fa; font-weight: 600; }
+  .warning { color: #f87171; font-weight: 600; }
+  .map-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.7rem 1.4rem;
+    background: #f8fafc;
+    color: #0f172a;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  .map-container {
+    margin-top: 1.4rem;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 380px;
+  }
+  .map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  .cta {
+    display: block;
+    text-align: center;
+    margin: 2rem 0 1rem;
+    padding: 1rem;
+    background: #3b82f6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: #64748b;
+    font-size: 0.9rem;
+  }
+  ul { padding-left: 1.2rem; }
+  li { margin-bottom: 0.35rem; }
+</style>
+</head>
+<body>
+  <header>
+    <button class="lang-toggle" onclick="toggleLang()">
+      <span id="btn-sk" class="active">SK</span> / <span id="btn-en">EN</span>
+    </button>
+
+    <h1>HACIENDA ČAB</h1>
+    <p class="subtitle" data-sk="Rozlúčková párty" data-en="Farewell Party">Rozlúčková párty</p>
+    <p class="date" data-sk="18. 9. 2026 • Piatok" data-en="18. 9. 2026 • Friday">18. 9. 2026 • Piatok</p>
+    <p class="who" data-sk="Bicyklisti piateho dňa, Sin Masters, náhodní okoloidúci…" data-en="Bicyklisti piateho dňa, Sin Masters, random bypassers…">Bicyklisti piateho dňa, Sin Masters, náhodní okoloidúci…</p>
+    
+    <p style="margin-top: 1.2rem;">
+      <strong data-sk="Miesto stretnutia:" data-en="Meeting point:">Miesto stretnutia:</strong><br>
+      <a href="https://mapy.com/s/numejetube" target="_blank" class="map-link" data-sk="OTVORIŤ MIESTO STRETNUTIA →" data-en="OPEN MEETING POINT →">OTVORIŤ MIESTO STRETNUTIA →</a>
+    </p>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2 data-sk="🔥 TOTO JE ROZLÚČKA" data-en="🔥 THIS IS A FAREWELL">🔥 TOTO JE ROZLÚČKA</h2>
+      <p data-sk="Dom je na predaj. Toto môže byť posledná poriadna párty pod touto strechou. Modlite sa a dúfajte v rýchly predaj!" data-en="The house is on sale. This might be the last proper party under this roof. Pray and hope for a quick sale!">Dom je na predaj. Toto môže byť posledná poriadna párty pod touto strechou. Modlite sa a dúfajte v rýchly predaj!</p>
+    </div>
+
+    <div class="card">
+      <h2 data-sk="🍻 PIATOK – PRÍCHOD & MELTDOWN (od 16:00)" data-en="🍻 FRIDAY – ARRIVAL & MELTDOWN (from 16:00)">🍻 PIATOK – PRÍCHOD & MELTDOWN (od 16:00)</h2>
+      <p data-sk="Príďte, odhoďte tašky a predstierajte, že posledných 25 rokov sa nikdy nestalo." data-en="Roll in, dump the bags, and pretend the last 25 years never happened.">Príďte, odhoďte tašky a predstierajte, že posledných 25 rokov sa nikdy nestalo.</p>
+      
+      <ul style="margin-top: 1.3rem;">
+        <li data-sk="Prehliadka pozemku" data-en="Property tour">Prehliadka pozemku</li>
+        <li data-sk="Večera (18:00) – jasná vec, zjeme nejaké mŕtve zviera" data-en="Dinner (18:00) – sure thing, we will eat some dead animal">Večera (18:00) – jasná vec, zjeme nejaké mŕtve zviera</li>
+        <li data-sk="Hlboké debaty o ničom, ťahanie Binďovej nohy je povinné" data-en="Deep talks about nothing, pulling Binďo’s leg is mandatory">Hlboké debaty o ničom, ťahanie Binďovej nohy je povinné</li>
+        <li data-sk='Voliteľné: <span class="highlight">návšteva miestnych barov, chlast a prostitútky</span>' data-en='Optional: <span class="highlight">visit of local bars, booze & prostitutes</span>'>Voliteľné: <span class="highlight">návšteva miestnych barov, chlast a prostitútky</span></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2 data-sk="🚵 SOBOTA – GRAVEL & MAMILs" data-en="🚵 SATURDAY – GRAVEL & MAMILs">🚵 SOBOTA – GRAVEL & MAMILs</h2>
+      <p data-sk="8:00–8:45 Raňajky. Nikto nesmie mať kocovinu a prázdny žalúdok." data-en="8:00–8:45 Breakfast. Nobody is allowed to have a hangover and empty stomach.">8:00–8:45 Raňajky. Nikto nesmie mať kocovinu a prázdny žalúdok.</p>
+      <br>
+      <p data-sk="09:00 ostro! A vieš, že keď poviem ostro, tak myslím ostro!! Ideme na miestne gravel cesty – krásne, trochu bolestivé. Ideálne pre Middle Aged Men In Lycra." data-en="09:00 sharp! And you know me – when I say sharp I mean sharp!! We will hit local gravel roads. Beautiful, slightly painful. Perfect for Middle Aged Men In Lycra.">09:00 ostro! A vieš, že keď poviem ostro, tak myslím ostro!! Ideme na miestne gravel cesty – krásne, trochu bolestivé. Ideálne pre Middle Aged Men In Lycra.</p>
+      <br>
+      <ul>
+        <li data-sk="<strong>55–60 km</strong> čistej gravel radosti (≈ 3,5 hodiny jemného utrpenia)" data-en="<strong>55–60 km</strong> of pure gravel joy (≈ 3.5 hours of gentle suffering)"><strong>55–60 km</strong> čistej gravel radosti (≈ 3,5 hodiny jemného utrpenia)</li>
+        <li data-sk="Ľahká až stredná jazda – v pondelok ešte máme prácu" data-en="Easy-to-medium ride – we still have jobs on Monday">Ľahká až stredná jazda – v pondelok ešte máme prácu</li>
+        <li data-sk="Selfie zastávky povinné" data-en="Selfie stops mandatory">Selfie zastávky povinné</li>
+        <li data-sk="Očakáva sa plná MAMIL paráda (lycra voliteľná, ale silne odporúčaná)" data-en="Full MAMIL parade expected (lycra optional, but strongly encouraged)">Očakáva sa plná MAMIL paráda (lycra voliteľná, ale silne odporúčaná)</li>
+        <li data-sk="„V Alekšincách na zábave ja to rozpálim…“ teda, tam si dáme pizzu, chcel som napísať…" data-en="„V Alekšincách na zábave ja to rozpálim…“ well, we’ll have pizza there, that’s what I meant…">„V Alekšincách na zábave ja to rozpálim…“ teda, tam si dáme pizzu, chcel som napísať…</li>
+        <li data-sk="Chill and dismiss" data-en="Chill and dismiss">Chill and dismiss</li>
+        <li data-sk="Nech je vaša reťaz namazaná a duše nahustené" data-en="May your chain be oiled and your souls inflated">Nech je vaša reťaz namazaná a duše nahustené</li>
+      </ul>
+      <br>
+      <p>
+        <a href="https://mapy.com/s/gucuhubeku" target="_blank" class="map-link" data-sk="OTVORIŤ TRASU NA MAPY.COM →" data-en="OPEN THE ROUTE ON MAPY.COM →">OTVORIŤ TRASU NA MAPY.COM →</a>
+      </p>
+
+      <div class="map-container">
+        <iframe src="https://mapy.com/s/holamuheso" allowfullscreen></iframe>
+      </div>
+      <br>
+      <p data-sk="* Voliteľná druhá noc, ak to telo (a pečeň) dovolí" data-en="* Optional second night if the body (and liver) allows">* Voliteľná druhá noc, ak to telo (a pečeň) dovolí</p>
+    </div>
+
+    <div class="card">
+      <h2 data-sk="🛏️ DÔLEŽITÉ – SPACIE PODMIENKY" data-en="🛏️ IMPORTANT – SLEEPING ARRANGEMENTS">🛏️ DÔLEŽITÉ – SPACIE PODMIENKY</h2>
+      <p data-sk='<span class="warning">V dome bude skoro žiadny nábytok.</span> Strecha je zabezpečená. Všetko ostatné je DIY.' data-en='<span class="warning">There will be almost no furniture in the house.</span> Roof is provided. Everything else is DIY.'><span class="warning">V dome bude skoro žiadny nábytok.</span> Strecha je zabezpečená. Všetko ostatné je DIY.</p>
+      <ul>
+        <li data-sk="<strong>Prineste si vlastný spacák</strong> (a ideálne aj karimatku)" data-en="<strong>Bring your own sleeping bag</strong> (and preferably a mat)"><strong>Prineste si vlastný spacák</strong> (a ideálne aj karimatku)</li>
+        <li data-sk="Podlaha je váš najlepší kamarát" data-en="Floor is your best friend">Podlaha je váš najlepší kamarát</li>
+        <li data-sk="Len pár šťastlivcov bude mať miesto na gauči (Binďo s najväčšou pravdepodobnosťou)" data-en="Only a few lucky ones will get a place on the sofa (Binďo most probably)">Len pár šťastlivcov bude mať miesto na gauči (Binďo s najväčšou pravdepodobnosťou)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2 data-sk="PRE KOHO TO JE?" data-en="WHO IS THIS FOR?">PRE KOHO TO JE?</h2>
+      <p data-sk="Iba cyklisti. 18–99 rokov „mladí“. Certifikovaní MAMILs. Ride or die nadšenci. Stále nebezpeční. Stále vtipní." data-en="Cyclists only. 18–99 years “young”. Certified MAMILs. Ride or die enthusiasts. Still dangerous. Still funny.">Iba cyklisti. 18–99 rokov „mladí“. Certifikovaní MAMILs. Ride or die nadšenci. Stále nebezpeční. Stále vtipní.</p>
+    </div>
+
+    <a href="mailto:your@email.com?subject=Hacienda%20Čab%20–%20Som%20IN" class="cta" data-sk="SOM IN – REZERVUJ MI MIESTO NA PODLAHE" data-en="I’M IN – SAVE ME A SPOT ON THE FLOOR">SOM IN – REZERVUJ MI MIESTO NA PODLAHE</a>
+  </div>
+
+  <footer data-sk="Hacienda Čab • Posledná párty pred predajom • Žiadny nábytok • Maximálna improvizácia" data-en="Hacienda Čab • Last party before the sale • No furniture • Maximum improvisation">
+    Hacienda Čab • Posledná párty pred predajom • Žiadny nábytok • Maximálna improvizácia
+  </footer>
+
+<script>
+  let currentLang = 'sk';
+
+  function toggleLang() {
+    currentLang = currentLang === 'sk' ? 'en' : 'sk';
+    
+    document.getElementById('btn-sk').classList.toggle('active', currentLang === 'sk');
+    document.getElementById('btn-en').classList.toggle('active', currentLang === 'en');
+    document.documentElement.lang = currentLang;
+
+    document.querySelectorAll('[data-sk]').forEach(el => {
+      el.innerHTML = el.getAttribute('data-' + currentLang);
+    });
+  }
+</script>
+</body>
+</html>
