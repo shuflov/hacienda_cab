@@ -216,18 +216,23 @@
 
 <script>
   let currentLang = 'sk';
-
-  function toggleLang() {
-    currentLang = currentLang === 'sk' ? 'en' : 'sk';
-
+ 
+  function applyLang() {
     document.getElementById('btn-sk').classList.toggle('active', currentLang === 'sk');
     document.getElementById('btn-en').classList.toggle('active', currentLang === 'en');
     document.documentElement.lang = currentLang;
-
+ 
     document.querySelectorAll('[data-sk]').forEach(el => {
       el.innerHTML = el.getAttribute('data-' + currentLang);
     });
   }
+ 
+  function toggleLang() {
+    currentLang = currentLang === 'sk' ? 'en' : 'sk';
+    applyLang();
+  }
+ 
+  document.addEventListener('DOMContentLoaded', applyLang);
 </script>
 </body>
 </html>
